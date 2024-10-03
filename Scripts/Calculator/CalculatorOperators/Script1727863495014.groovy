@@ -17,7 +17,7 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startApplication('mobileapp/calculator_v8.apk', false)
+Mobile.startApplication('mobileapp/calculator_v8.apk', true)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
 
@@ -38,8 +38,6 @@ Mobile.tap(findTestObject('Calculator/Button - 3'), 0)
 Mobile.tap(findTestObject('Calculator/Button - equal'), 0)
 
 Mobile.delay(3, FailureHandling.STOP_ON_FAILURE)
-
-Mobile.verifyElementVisible(findTestObject(null), 27)
 
 Mobile.closeApplication()
 
